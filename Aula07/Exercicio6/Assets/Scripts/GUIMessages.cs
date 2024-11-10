@@ -5,21 +5,11 @@ public class GUIMessages : MonoBehaviour
     // The messages fade speed
     [SerializeField] [Range(0.1f, 1f)] float fadeSpeed = 0.6f;
 
-    // Reference to the event master
-    private EventMaster em;
-
     // Degree of visibility of each label
     private float visibilityW;
     private float visibilityA;
     private float visibilityS;
     private float visibilityD;
-
-    // Awake is called one time at the beginning
-    private void Awake()
-    {
-        // Get reference to the event master
-        em = GetComponent<EventMaster>();
-    }
 
     // Start is called before the first frame update
     private void Start()
