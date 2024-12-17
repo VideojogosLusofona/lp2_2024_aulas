@@ -12,7 +12,7 @@ work. If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/>.
 
 Este repositório contém os ficheiros usados nas aulas de Linguagens de
 Programação II do semestre 2024/25 do curso de [Videojogos][licvideo]
-da [ULHT].
+da [Universidade Lusófona - Centro Universitário de Lisboa][ULHT].
 
 ## Licenças
 
@@ -24,10 +24,10 @@ Os textos e restantes ficheiros são disponibilizados através da licença
 
 * Autor: [Nuno Fachada]
 * Curso:  [Licenciatura em Videojogos][licvideo]
-* Instituição: [Universidade Lusófona de Humanidades e Tecnologias][ULHT]
+* Instituição: [Universidade Lusófona - Centro Universitário de Lisboa][ULHT]
 
 [GPLv3]:https://www.gnu.org/licenses/gpl-3.0.en.html
 [CC BY-NC-SA 4.0]:https://creativecommons.org/licenses/by-nc-sa/4.0/
-[licvideo]:https://www.ulusofona.pt/licenciatura/videojogos
-[Nuno Fachada]:https://github.com/fakenmc
+[licvideo]:https://www.ulusofona.pt/lisboa/licenciaturas/videojogos
+[Nuno Fachada]:https://github.com/nunofachada
 [ULHT]:https://www.ulusofona.pt/
