@@ -4,22 +4,16 @@ using UnityEngine;
 /// <summary>
 /// A general object pool for Unity game objects.
 /// </summary>
-public class ObjectPool : MonoBehaviour
+public class ObjectPool : MonoBehaviour, IGameObjectFactory, IGameObjectRecycler
 {
+    // The prefab from which new game objects will be created
+    [SerializeField] private GameObject prefab;
+
     // Initial number of objects in the pool
     [SerializeField] private uint initPoolSize;
 
     // A stack is the simplest collection we can use for an object pool
     private Stack<GameObject> pool;
-
-    // The game object factory creates new game objects when necessary
-    private IGameObjectFactory factory;
-
-    private void Awake()
-    {
-        // Find a game object factory
-        factory = GetComponent<IGameObjectFactory>();
-    }
 
     private void Start()
     {
@@ -31,7 +25,7 @@ public class ObjectPool : MonoBehaviour
         {
             // Create a new game object (that's the responsibility of the game
             // object factory)
-            GameObject newGameObject = factory.Create();
+            GameObject newGameObject = ActualCreate();
 
             // Deactivate the game object and keep it in the pool, ready to be
             // used when necessary
@@ -44,14 +38,14 @@ public class ObjectPool : MonoBehaviour
     /// Get an object from the pool.
     /// </summary>
     /// <returns>A ready-to-use game object.</returns>
-    public GameObject GetFromPool()
+    public GameObject Create()
     {
         GameObject gameObject;
 
         if (pool.Count == 0)
         {
             // If there are no objects left in the pool, create a new one
-            gameObject = factory.Create();
+            gameObject = ActualCreate();
         }
         else
         {
@@ -62,11 +56,17 @@ public class ObjectPool : MonoBehaviour
         return gameObject;
     }
 
+    // This method will actually create game objects when necessary
+    private GameObject ActualCreate()
+    {
+        return Instantiate(prefab, transform);
+    }
+
     /// <summary>
     /// Return a game object to the pool.
     /// </summary>
     /// <param name="gameObject">Game object to return to the pool.</param>
-    public void ReturnToPool(GameObject gameObject)
+    public void Remove(GameObject gameObject)
     {
         // Deactivate it and return it to the pool
         gameObject.SetActive(false);

@@ -351,7 +351,6 @@ GameObject:
   - component: {fileID: 1162935210}
   - component: {fileID: 1162935208}
   - component: {fileID: 1162935211}
-  - component: {fileID: 1162935212}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -399,20 +398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74df43669b5ae541796f661c772ed98e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initPoolSize: 30
---- !u!114 &1162935212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162935207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a84411d1bdf7379386b2a3a8690fa65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   prefab: {fileID: 1549304282496569885, guid: e579e031d5e907f4a8032beb9435428a, type: 3}
+  initPoolSize: 30
 --- !u!1 &1186709954
 GameObject:
   m_ObjectHideFlags: 0
