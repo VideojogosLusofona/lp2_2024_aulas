@@ -9,5 +9,5 @@ public interface IGameObjectFactory
     /// Create a new game object.
     /// </summary>
     /// <returns>A new game object.</returns>
-    public GameObject Create();
+    GameObject Create();
 }

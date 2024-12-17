@@ -9,5 +9,5 @@ public interface IGameObjectRecycler
     /// Remove a game object.
     /// </summary>
     /// <param name="gameObject">Game object to remove.</param>
-    public void Remove(GameObject gameObject);
+    void Remove(GameObject gameObject);
 }
